@@ -11,12 +11,6 @@
 -- DROP TABLE IF EXISTS actors CASCADE;
 
 -- 2. Buat 7 Tabel sesuai struktur IMDb
--- CREATE TABLE actors (
---     id int8 PRIMARY KEY,
---     first_name varchar(100),
---     last_name varchar(100),
---     gender bpchar(1)
--- );
 
 -- CREATE TABLE directors (
 --     id int8 PRIMARY KEY,
@@ -46,6 +40,13 @@
 -- CREATE TABLE movies_genres (
 --     movie_id int8 REFERENCES movies(id),
 --     genre varchar(100)
+-- );
+
+-- CREATE TABLE actors (
+--     id int8 PRIMARY KEY,
+--     first_name varchar(100),
+--     last_name varchar(100),
+--     gender bpchar(1)
 -- );
 
 -- CREATE TABLE roles (
