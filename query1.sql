@@ -143,8 +143,13 @@
 -- FROM generate_series(1, 2000);
 
 -- -- Jawaban dari minitask!
-SELECT name FROM movies WHERE year > 2000;
-SELECT first_name FROM actors WHERE first_name ILIKE '%s';
-SELECT rating FROM movies WHERE rating BETWEEN  5 AND 7 AND year BETWEEN 2004 AND 2006;
-SELECT COUNT(rating) FROM movies WHERE rating = 6;
+-- SELECT name FROM movies WHERE year > 2000;
+-- SELECT first_name FROM actors WHERE first_name ILIKE '%s';
+-- SELECT rating FROM movies WHERE rating BETWEEN  5 AND 7 AND year BETWEEN 2004 AND 2006;
+-- SELECT COUNT(rating) FROM movies WHERE rating = 6;
 
+SELECT m.name, mg.genre, md.director_id FROM movies m
+INNER JOIN movies_genres mg ON m.id = mg.movie_id
+INNER JOIN movies_directors md ON md.movie_id = mg.movie_id
+LIMIT 100
+OFFSET 100;
